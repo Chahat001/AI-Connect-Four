@@ -5,7 +5,6 @@ import Minimax
 
 def main_gameflow(r, c):
 
-
     # game is in progress
     actions = AIEnvironment.action(board)
     if (r, c) in actions:
@@ -37,16 +36,14 @@ def main_gameflow(r, c):
 
 
 
-
-
 # main program
 window_1 = tk.Tk()
 window_1.title('Connect Four')
 
-minimax = Minimax.Minimax(5)
+minimax = Minimax.Minimax(6)
 
-board = [['' for i in range(6)] for j in  range(6)]
-display_board = [['' for i in range(6)] for j in  range(6)]
+board = [['' for _ in range(6)] for _ in range(6)]
+display_board = [['' for _ in range(6)] for _ in range(6)]
 
 for i in range(len(board)):
     for j in range(len(board)):
